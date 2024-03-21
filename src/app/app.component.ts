@@ -2,6 +2,8 @@ import { NgComponentOutlet } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './Core/Components/navbar/navbar.component';
+import { HttpClient } from '@angular/common/http';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -10,5 +12,5 @@ import { NavbarComponent } from './Core/Components/navbar/navbar.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'FDManagementUI';
+  
 }
