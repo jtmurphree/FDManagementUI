@@ -1,0 +1,36 @@
+<div class="container">
+    <h1 class="mt-3">Apparatus</h1>
+
+    <div class="d-flex justify-content-end mt-3">
+        <a href="#" class="btn btn-primary">Add Apparatus</a>
+    </div>
+
+    <ng-container *ngIf="apparatus$ | async as apps">
+        <table class="table table-bordered mt-3">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Unit</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Mileage</th>
+                    <th>Type</th>
+                    <th>Fuel</th>
+                    <th>Drive</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let app of apps">
+                    <td>{{app.id}}</td>
+                    <td>{{app.unitNum}}</td>
+                    <td>{{app.make}}</td>
+                    <td>{{app.model}}</td>
+                    <td>{{app.mileage.toString()}}</td>
+                    <td>{{app.apparatusType}}</td>
+                    <td>{{app.fueltype}}</td>
+                    <td>{{app.driveType}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </ng-container>
+</div>
