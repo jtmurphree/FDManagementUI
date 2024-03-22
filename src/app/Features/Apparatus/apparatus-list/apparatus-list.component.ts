@@ -4,13 +4,13 @@ import { Apparatus } from '../models/apparatus.model';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 @Component({
-  selector: 'app-apparatus',
+  selector: 'app-apparatus-list',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './apparatus.component.html',
-  styleUrl: './apparatus.component.css'
+  templateUrl: './apparatus-list.component.html',
+  styleUrl: './apparatus-list.component.css'
 })
-export class ApparatusComponent implements OnInit {
+export class ApparatusListComponent implements OnInit {
   apparatus$?: Observable<Apparatus[]>;
 
   constructor(private appService: ApparatusService){
