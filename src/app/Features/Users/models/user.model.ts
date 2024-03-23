@@ -6,5 +6,6 @@ export interface User{
     employeeId: string;
     phoneNumber: string;
     email: string;
+    userRoleName: string;
     dateAdded: Date;
 }

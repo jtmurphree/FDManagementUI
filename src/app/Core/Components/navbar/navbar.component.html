@@ -1,0 +1,22 @@
+<div class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+        <a class="navbar-brand" [routerLink]="['']">Fire Department Managment System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Admin
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" [routerLink]="['admin/users']" routerLinkActive="router-link-active" >Users</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['admin/apparatus']" routerLinkActive="router-link-active">Apparatus</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['admin/items']">Inventory</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
