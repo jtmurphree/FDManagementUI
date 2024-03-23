@@ -3,13 +3,15 @@ export class Item{
     name: string;
     description: string;
     serialNumber: string;
-    category: number;
+    categoryID: number;
+    categoryName: string;
 
     constructor(){
         this.id = 0;
         this.name = '';
         this.description = '';
         this.serialNumber = '';
-        this.category = 0;
+        this.categoryID = 0;
+        this.categoryName = ''
     }
 }
