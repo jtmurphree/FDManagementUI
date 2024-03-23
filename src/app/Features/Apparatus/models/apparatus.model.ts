@@ -5,9 +5,12 @@ export class Apparatus{
     model: string;
     mileage: number;
     mileageDate?: Date;
-    apparatusType: number;
-    fueltype: number;
-    driveType: number;
+    apparatusTypeId: number;
+    apparatusType: string;
+    fueltypeId: number;
+    fuelType: string
+    driveTypeId: number;
+    driveType: string;
 
     constructor(){
         this.id = 0;
@@ -16,8 +19,11 @@ export class Apparatus{
         this.model = '';
         this.mileage = 0;
         this.mileageDate = undefined;
-        this.apparatusType = 0;
-        this.fueltype = 0;
-        this.driveType = 0;
+        this.apparatusTypeId = 0;
+        this.apparatusType = '';
+        this.fueltypeId = 0;
+        this.fuelType = '';
+        this.driveTypeId = 0;
+        this.driveType = '';
     }
 }
