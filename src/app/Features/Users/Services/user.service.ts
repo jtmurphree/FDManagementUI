@@ -16,6 +16,6 @@ export class UserService {
   }
 
   addUser(model: AddUserRequest): Observable<void>{
-    return this.http.post<void>(`${environment.apiBaseUrl}/User`, model);
+    return this.http.post<void>(`${environment.apiBaseUrl}/api/User`, model);
   }
 }
