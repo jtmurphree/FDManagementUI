@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../../environments/environment.development';
 import { User } from '../models/user.model';
+import { AddUserRequest } from '../models/addUserRequest.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,5 +13,9 @@ export class UserService {
 
   getAllusers(): Observable<User[]>{
     return this.http.get<User[]>(`${environment.apiBaseUrl}/api/User`);
+  }
+
+  addUser(model: AddUserRequest): Observable<void>{
+    return this.http.post<void>(`${environment.apiBaseUrl}/User`, model);
   }
 }
