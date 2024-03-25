@@ -3,10 +3,12 @@ import { ApparatusService } from '../Services/apparatus.service';
 import { Apparatus } from '../models/apparatus.model';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router';
+
 @Component({
   selector: 'app-apparatus-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink, RouterLinkActive, RouterOutlet],
   templateUrl: './apparatus-list.component.html',
   styleUrl: './apparatus-list.component.css'
 })
