@@ -42,7 +42,7 @@
             </div>
             <div class="mt-3">
                 <label class="form-label">Drive Type</label>
-                <select #selectedDrive (chang)="onDriveSelection($event)">
+                <select #selectedDrive (change)="onDriveSelection($event)">
                     <option *ngFor="let x of driveTypes" value="{{x.id}}">{{x.name}}</option>
                 </select>
             </div>

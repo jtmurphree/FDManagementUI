@@ -26,7 +26,7 @@ export class AddApparatusComponent {
   private driveTypeSubscription?: Subscription;
 
   private apparatusType: string = '';
-  private fueltype: string = '';
+  private fuelType: string = '';
   private driveType: string = '';
 
   apparatusTypes: ApparatusType[] = [];
@@ -39,7 +39,7 @@ export class AddApparatusComponent {
     this.getFuelTypes();
     this.getDriveTypes();
     this.apparatusType = '1';
-    this.fueltype = '1';
+    this.fuelType = '1';
     this.driveType = '1';
   }
 
@@ -52,6 +52,9 @@ export class AddApparatusComponent {
 
   OnFormSubmit(): void {
     this.model.apparatusTypeId = +this.apparatusType;
+    this.model.fueltypeId = +this.fuelType;
+    this.model.driveTypeId = +this.driveType;
+
     this.addApparatusSubscription = this.appService.addApparatus(this.model)
     .subscribe({
       next: (response) => {
@@ -65,7 +68,7 @@ export class AddApparatusComponent {
   }
 
   onFuelSelection(event: Event): void {
-    this.fueltype = (event.target as HTMLSelectElement).value;
+    this.fuelType = (event.target as HTMLSelectElement).value;
   }
 
   onDriveSelection(event: Event): void {
