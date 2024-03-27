@@ -35,6 +35,9 @@ export class AddApparatusComponent {
 
   constructor(private appService: ApparatusService, private router: Router){
     this.model = new AddApparatusRequest;
+    this.model.apparatusTypeId = 1;
+    this.model.fueltypeId = 1;
+    this.model.driveTypeId = 1;
     this.getApparatusTypes();
     this.getFuelTypes();
     this.getDriveTypes();
@@ -51,10 +54,7 @@ export class AddApparatusComponent {
   }
 
   OnFormSubmit(): void {
-    this.model.apparatusTypeId = +this.apparatusType;
-    this.model.fueltypeId = +this.fuelType;
-    this.model.driveTypeId = +this.driveType;
-
+    
     this.addApparatusSubscription = this.appService.addApparatus(this.model)
     .subscribe({
       next: (response) => {
@@ -64,15 +64,16 @@ export class AddApparatusComponent {
   }
 
   onTypeSelection(event: Event):void{
-    this.apparatusType = (event.target as HTMLSelectElement).value;
+    this.model.apparatusTypeId = +(event.target as HTMLSelectElement).value;
   }
 
   onFuelSelection(event: Event): void {
-    this.fuelType = (event.target as HTMLSelectElement).value;
+    this.model.fueltypeId = +(event.target as HTMLSelectElement).value;
   }
 
   onDriveSelection(event: Event): void {
-    this.driveType = (event.target as HTMLSelectElement).value;
+    //this.driveType = (event.target as HTMLSelectElement).value;
+    this.model.driveTypeId = +(event.target as HTMLSelectElement).value;
   }
 
   getApparatusTypes(): void {
