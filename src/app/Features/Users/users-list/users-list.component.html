@@ -1,9 +1,10 @@
 <div class="container">
-    <h1 class="mt-3">Users List</h1>
+    <h1 class="mt-3">Users</h1>
 
     <div class="d-flex justify-content-end mt-3">
-        <a [routerLink]="['adduser']" routerLinkActive="router-link-active" class="btn btn-primary">Add User</a>
-        <!-- <a href="admin/users/add" class="btn btn-primary">Add User</a> -->
+        <span><a [routerLink]="['adduser']" routerLinkActive="router-link-active" class="btn btn-primary">Add User</a></span>
+        &nbsp;&nbsp;
+        <span><a [routerLink]="['roles']" routerLinkActive="router-link-active" class="btn btn-primary">User Roles</a></span>
     </div>
 
     <ng-container *ngIf="users$ | async as users">

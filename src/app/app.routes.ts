@@ -6,8 +6,13 @@ import { ItemListComponent } from './Features/Inventory/item-list/item-list.comp
 import { AddUserComponent } from './Features/Users/add-user/add-user.component';
 import { AddApparatusComponent } from './Features/Apparatus/add-apparatus/add-apparatus.component';
 import { AddItemComponent } from './Features/Inventory/add-item/add-item.component';
+import { RoleListComponent } from './Features/Users/role-list/role-list.component';
 
 export const routes: Routes = [
+    {
+        path: 'admin/users/roles',
+        component: RoleListComponent
+    },
     {
         path: 'admin/users/adduser',
         component: AddUserComponent
