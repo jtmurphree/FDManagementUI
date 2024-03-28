@@ -1,27 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../Services/user.service';
-import { User } from '../models/user.model';
+import { UserRole } from '../models/userRole.model';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  selector: 'app-users-list',
+  selector: 'app-role-list',
   standalone: true,
   imports: [CommonModule, FormsModule, RouterLink, RouterLinkActive],
-  templateUrl: './users-list.component.html',
-  styleUrl: './users-list.component.css'
+  templateUrl: './role-list.component.html',
+  styleUrl: './role-list.component.css'
 })
-export class UsersListComponent implements OnInit{
-  users$?: Observable<User[]>;
+export class RoleListComponent implements OnInit{
+  userRoles$?: Observable<UserRole[]>;
 
   constructor(private userService: UserService){
 
   }
 
   ngOnInit(): void {
-    this.users$ = this.userService.getAllusers();
+    this.userRoles$ = this.userService.getUserRoles();
   }
 }
-
