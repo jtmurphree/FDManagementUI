@@ -7,6 +7,10 @@ import { AddUserComponent } from './Features/Users/add-user/add-user.component';
 import { AddApparatusComponent } from './Features/Apparatus/add-apparatus/add-apparatus.component';
 import { AddItemComponent } from './Features/Inventory/add-item/add-item.component';
 import { RoleListComponent } from './Features/Users/role-list/role-list.component';
+import { TypeListComponent } from './Features/Apparatus/type-list/type-list.component';
+import { AddTypeComponent } from './Features/Apparatus/add-type/add-type.component';
+import { FuelTypeListComponent } from './Features/Apparatus/fuel-type-list/fuel-type-list.component';
+import { AddFuelTypeComponent } from './Features/Apparatus/add-fuel-type/add-fuel-type.component';
 
 export const routes: Routes = [
     {
@@ -16,6 +20,22 @@ export const routes: Routes = [
     {
         path: 'admin/users/adduser',
         component: AddUserComponent
+    },
+    {
+        path: 'admin/apparatus/types',
+        component: TypeListComponent
+    },
+    {
+        path: 'admin/apparatus/types/addtype',
+        component: AddTypeComponent
+    },
+    {
+        path: 'admin/apparatus/fueltypes',
+        component: FuelTypeListComponent
+    },
+    {
+        path: 'admin/apparatus/fueltypes/addFueltype',
+        component: AddFuelTypeComponent
     },
     {
         path: 'admin/apparatus/addapparatus',
