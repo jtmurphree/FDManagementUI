@@ -13,7 +13,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './fuel-type-list.component.html',
   styleUrl: './fuel-type-list.component.css'
 })
-export class FuelTypeListComponent {
+export class FuelTypeListComponent implements OnInit{
   fuelTypes$?: Observable<FuelType[]>;
 
   constructor(private appService: ApparatusService){

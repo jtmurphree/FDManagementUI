@@ -1,1 +1,26 @@
-<p>drive-type-list works!</p>
+<div class="container">
+    <h1 class="mt-3">Users</h1>
+
+    <div class="d-flex justify-content-end mt-3">
+        <span><a [routerLink]="['..']" routerLinkActive="router-link-active" class="btn btn-primary">Apparatus</a></span>
+        &nbsp;&nbsp;
+        <span><a [routerLink]="['adddrivetype']" routerLinkActive="router-link-active" class="btn btn-primary">Add Drive Type</a></span>
+    </div>
+
+    <ng-container *ngIf="driveTypes$ | async as drives">
+        <table class="table table-bordered mt-3">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let drive of drives">
+                    <td>{{drive.name}}</td>
+                    <td>{{drive.description}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </ng-container>
+</div>
