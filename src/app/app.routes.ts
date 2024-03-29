@@ -34,7 +34,7 @@ export const routes: Routes = [
         component: FuelTypeListComponent
     },
     {
-        path: 'admin/apparatus/fueltypes/addFueltype',
+        path: 'admin/apparatus/fueltypes/addfueltype',
         component: AddFuelTypeComponent
     },
     {
