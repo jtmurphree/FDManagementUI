@@ -7,6 +7,7 @@ import { AddUserComponent } from './Features/Users/add-user/add-user.component';
 import { AddApparatusComponent } from './Features/Apparatus/add-apparatus/add-apparatus.component';
 import { AddItemComponent } from './Features/Inventory/add-item/add-item.component';
 import { RoleListComponent } from './Features/Users/role-list/role-list.component';
+import { CategoryListComponent } from './Features/Inventory/category-list/category-list.component';
 
 export const routes: Routes = [
     {
@@ -24,6 +25,10 @@ export const routes: Routes = [
     {
         path: 'admin/items/additem',
         component: AddItemComponent
+    },
+    {
+        path: 'admin/items/categories',
+        component: CategoryListComponent
     },
     {
         path: 'admin/users',
