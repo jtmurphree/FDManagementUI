@@ -9,6 +9,7 @@ import { FuelType } from '../models/fuelType.model';
 import { DriveType } from '../models/driveType.model';
 import { AddFuleTypeRequest } from '../models/addFuelTypeRequest.model';
 import { AddDriveTypeRequest } from '../models/addDriveTypeRequest.model';
+import { AddApparatusTypeRequest } from '../models/addTypeRequest.model';
 
 @Injectable({
   providedIn: 'root'
@@ -43,5 +44,9 @@ export class ApparatusService {
 
   getDriveTypes(): Observable<DriveType[]>{
     return this.http.get<FuelType[]>(`${environment.apiBaseUrl}/api/Apparatus/drivetypes`);
+  }
+
+  addApparatusType(model: AddApparatusTypeRequest): Observable<void>{
+    return this.http.post<void>(`${environment.apiBaseUrl}/api/Apparatus/addtype`, model);
   }
 }
