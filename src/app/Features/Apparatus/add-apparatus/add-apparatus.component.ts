@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { AddApparatusRequest } from '../models/addApparatusRequest.model';
 import { Subscription } from 'rxjs';
@@ -18,16 +18,12 @@ import { FuelType } from '../models/fuelType.model';
   styleUrl: './add-apparatus.component.css'
 })
 
-export class AddApparatusComponent {
+export class AddApparatusComponent implements OnDestroy{
   model: AddApparatusRequest;
   private addApparatusSubscription?: Subscription;
   private apparatusTypeSubscription?: Subscription;
   private fuelTypeSubscription?: Subscription;
   private driveTypeSubscription?: Subscription;
-
-  private apparatusType: string = '';
-  private fuelType: string = '';
-  private driveType: string = '';
 
   apparatusTypes: ApparatusType[] = [];
   fuelTypes: FuelType[] = [];
@@ -41,9 +37,6 @@ export class AddApparatusComponent {
     this.getApparatusTypes();
     this.getFuelTypes();
     this.getDriveTypes();
-    this.apparatusType = '1';
-    this.fuelType = '1';
-    this.driveType = '1';
   }
 
   ngOnDestroy(): void {
@@ -72,7 +65,6 @@ export class AddApparatusComponent {
   }
 
   onDriveSelection(event: Event): void {
-    //this.driveType = (event.target as HTMLSelectElement).value;
     this.model.driveTypeId = +(event.target as HTMLSelectElement).value;
   }
 
@@ -91,7 +83,7 @@ export class AddApparatusComponent {
       next: (response) => {
         this.fuelTypes = response;
       }
-    })
+    });
   }
 
   getDriveTypes(): void {
@@ -100,6 +92,6 @@ export class AddApparatusComponent {
       next: (response) => {
         this.driveTypes = response;
       }
-    })
+    });
   }
 }

@@ -1,0 +1,21 @@
+<div class="container">
+    <h1 class="mt-3">Add Apparatus Type</h1>
+    <button class="btn btn-primary" [routerLink]="['../']">Cancel</button>
+    <form #form="ngForm" (ngSubmit)="OnFormSubmit()">
+        <div class="mt-2">
+            <div class="mt-3">
+                <label class="form-label">Name</label>
+                <input type="text" id="name" class="form-control" name="name"
+                [(ngModel)]="model.name">
+            </div>
+            <div class="mt-3">
+                <label class="form-label">Description</label>
+                <input type="text" id="descirption" class="form-control" name="description"
+                [(ngModel)]="model.description">
+            </div>
+            <div class="mt-3">
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </form>
+</div>
