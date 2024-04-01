@@ -23,6 +23,7 @@ export class AddItemComponent implements OnDestroy {
 
   constructor(private itemService: ItemService, private router: Router){
     this.model = new AddItemRequest();
+    this.model.categoryID = 1;
     this.getCategories();
   }
 
