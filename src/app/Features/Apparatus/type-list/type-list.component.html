@@ -1,0 +1,27 @@
+<div class="container">
+    <h1 class="mt-3">Apparatus Types</h1>
+
+    <div class="d-flex justify-content-end mt-3">
+        <span><a [routerLink]="['..']" routerLinkActive="router-link-active" class="btn btn-primary">Appparatus</a></span>
+        &nbsp;&nbsp;
+        <span><a [routerLink]="['addtype']" routerLinkActive="router-link-active" class="btn btn-primary">Add Type</a></span>
+    </div>
+
+    <ng-container *ngIf="types$ | async as types">
+        <table class="table table-bordered mt-3">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let type of types">
+                    <td>{{type.name}}</td>
+                    <td>{{type.description}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </ng-container>
+</div>
+

@@ -15,7 +15,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class AddUserComponent implements OnDestroy {
    model: AddUserRequest;
-   private addUserSubscription?: Subscription
+   private addUserSubscription?: Subscription;
 
   constructor(private userService: UserService, private router: Router){
     this.model = new AddUserRequest();
