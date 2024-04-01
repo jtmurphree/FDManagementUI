@@ -22,6 +22,4 @@ export class ApparatusListComponent implements OnInit {
   ngOnInit(): void {
     this.apparatus$ = this.appService.getAll();
   }
-
-
 }

@@ -13,6 +13,7 @@ import { FuelTypeListComponent } from './Features/Apparatus/fuel-type-list/fuel-
 import { AddFuelTypeComponent } from './Features/Apparatus/add-fuel-type/add-fuel-type.component';
 import { DriveTypeListComponent } from './Features/Apparatus/drive-type-list/drive-type-list.component';
 import { AddDriveTypeComponent } from './Features/Apparatus/add-drive-type/add-drive-type.component';
+import { CategoryListComponent } from './Features/Inventory/category-list/category-list.component';
 
 export const routes: Routes = [
     {
@@ -54,6 +55,10 @@ export const routes: Routes = [
     {
         path: 'admin/items/additem',
         component: AddItemComponent
+    },
+    {
+        path: 'admin/items/categories',
+        component: CategoryListComponent
     },
     {
         path: 'admin/users',
