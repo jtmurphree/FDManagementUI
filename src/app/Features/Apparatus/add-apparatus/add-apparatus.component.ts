@@ -65,7 +65,6 @@ export class AddApparatusComponent implements OnDestroy{
   }
 
   onDriveSelection(event: Event): void {
-    //this.driveType = (event.target as HTMLSelectElement).value;
     this.model.driveTypeId = +(event.target as HTMLSelectElement).value;
   }
 
@@ -84,7 +83,7 @@ export class AddApparatusComponent implements OnDestroy{
       next: (response) => {
         this.fuelTypes = response;
       }
-    })
+    });
   }
 
   getDriveTypes(): void {
@@ -93,6 +92,6 @@ export class AddApparatusComponent implements OnDestroy{
       next: (response) => {
         this.driveTypes = response;
       }
-    })
+    });
   }
 }
