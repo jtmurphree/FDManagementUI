@@ -15,6 +15,7 @@ import { DriveTypeListComponent } from './Features/Apparatus/drive-type-list/dri
 import { AddDriveTypeComponent } from './Features/Apparatus/add-drive-type/add-drive-type.component';
 import { CategoryListComponent } from './Features/Inventory/category-list/category-list.component';
 import { AddUserRoleComponent } from './Features/Users/add-user-role/add-user-role.component';
+import { AddCategoryComponent } from './Features/Inventory/add-category/add-category.component';
 
 export const routes: Routes = [
     {
@@ -64,6 +65,10 @@ export const routes: Routes = [
     {
         path: 'admin/items/categories',
         component: CategoryListComponent
+    },
+    {
+        path: 'admin/items/categories/addcategory',
+        component: AddCategoryComponent
     },
     {
         path: 'admin/users',
