@@ -1,6 +1,8 @@
 # FDManagementUI
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+<p>This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.</p>
+<p>This is a management system for small and volunteer fire departments. The system will allow the department to keep track of members, apparatus, inventory, and training.
+Future versions will also have the ability to track finances.</p>
 
 ## Development server
 
