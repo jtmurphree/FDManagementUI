@@ -29,8 +29,10 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 ## To do
-Add component to add user role<br/>
 Add component to add Item Category<br/>
+Add user details<br/>
+Add bread crumbs for navigation<br/>
+Restructure navbar items<br/>
 Add authenication and security measures<br/>
 Add styling<br/>
 Add wiki for further information
