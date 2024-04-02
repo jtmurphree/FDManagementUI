@@ -14,11 +14,16 @@ import { AddFuelTypeComponent } from './Features/Apparatus/add-fuel-type/add-fue
 import { DriveTypeListComponent } from './Features/Apparatus/drive-type-list/drive-type-list.component';
 import { AddDriveTypeComponent } from './Features/Apparatus/add-drive-type/add-drive-type.component';
 import { CategoryListComponent } from './Features/Inventory/category-list/category-list.component';
+import { AddUserRoleComponent } from './Features/Users/add-user-role/add-user-role.component';
 
 export const routes: Routes = [
     {
         path: 'admin/users/roles',
         component: RoleListComponent
+    },
+    {
+        path: 'admin/users/roles/addrole',
+        component: AddUserRoleComponent
     },
     {
         path: 'admin/users/adduser',
