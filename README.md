@@ -2,7 +2,7 @@
 
 <p>This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.</p>
 <p>This is a management system for small and volunteer fire departments. The system will allow the department to keep track of members, apparatus, inventory, and training.
-Future versions will also have the ability to track finances and incident reports.</p>
+Future versions will also have the ability to track finances and incident reports. There is a seperate web api for the back end written in C#</p>
 
 ## Development server
 
@@ -31,4 +31,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## To do
 Add component to add user role<br/>
 Add component to add Item Category<br/>
-Add authenication and security measures
+Add authenication and security measures<br/>
+Add styling<br/>
+Add wiki for further information
