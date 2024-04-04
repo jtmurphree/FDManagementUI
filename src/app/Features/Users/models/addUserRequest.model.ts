@@ -3,6 +3,7 @@ export class AddUserRequest{
     lastName: string;
     userName:  string;
     displayName: string;
+    passwordHash: string;
     employeeId: string;
     phoneNumber: string;
     email: string;
@@ -15,6 +16,7 @@ export class AddUserRequest{
         this.lastName = '';
         this.userName = '';
         this.displayName = '';
+        this.passwordHash = '';
         this.employeeId = '';
         this.phoneNumber = '';
         this.email = ''

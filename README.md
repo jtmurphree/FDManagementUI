@@ -29,10 +29,12 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 ## To do
-Add user details<br/>
-Implement editing capability<br/>
-Add bread crumbs for navigation<br/>
-Restructure navbar items<br/>
-Add authenication and security measures<br/>
-Add styling<br/>
-Add wiki for further information
+<ul>
+    <li>Add user details</li>
+    <li>Implement editing capability</li>
+    <li>Add bread crumbs for navigation</li>
+    <li>Restructure navbar items</li>
+    <li>Add authenication and security measures</li>
+    <li>Add styling</li>
+    <li>Add wiki for further information</li>
+</ul>
