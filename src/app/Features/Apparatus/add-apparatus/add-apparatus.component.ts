@@ -32,7 +32,7 @@ export class AddApparatusComponent implements OnDestroy{
   constructor(private appService: ApparatusService, private router: Router){
     this.model = new AddApparatusRequest;
     this.model.apparatusTypeId = 1;
-    this.model.fueltypeId = 1;
+    this.model.fuelTypeId = 1;
     this.model.driveTypeId = 1;
     this.getApparatusTypes();
     this.getFuelTypes();
@@ -61,7 +61,7 @@ export class AddApparatusComponent implements OnDestroy{
   }
 
   onFuelSelection(event: Event): void {
-    this.model.fueltypeId = +(event.target as HTMLSelectElement).value;
+    this.model.fuelTypeId = +(event.target as HTMLSelectElement).value;
   }
 
   onDriveSelection(event: Event): void {
