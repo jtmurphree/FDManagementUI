@@ -1,27 +1,48 @@
-<div class="navbar navbar-expand-lg navbar-dark navbar-custom">
-    <div class="container">
-        <a class="navbar-brand" [routerLink]="['']">Fire Department Managment System</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle Navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-lg-0">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Admin
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" [routerLink]="['admin/users']" routerLinkActive="router-link-active" >Users</a></li>
-                        <li><a class="dropdown-item" [routerLink]="['admin/users/roles']" routerLinkActive="router-link-active">User Roles</a></li>
-                        <li><a class="dropdown-item" [routerLink]="['admin/apparatus']" routerLinkActive="router-link-active">Apparatus</a></li>
-                        <li><a class="dropdown-item" [routerLink]="['admin/apparatus/types']" routerLinkActive="router-link-active">Apparatus Type</a></li>
-                        <li><a class="dropdown-item" [routerLink]="['admin/apparatus/fueltypes']" routerLinkActive="router-link-active">Fuel Types</a></li>
-                        <li><a class="dropdown-item" [routerLink]="['admin/apparatus/drivetypes']" routerLinkActive="router-link-active">Drive Types</a></li>
-                        <li><a class="dropdown-item" [routerLink]="['admin/items']">Inventory</a></li>
-                        <li><a class="dropdown-item" [routerLink]="['admin/items/categories']">Item Categories</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
+<mat-toolbar color="primary">
+    <!-- main menus -->
+    <span>FDManagement</span>
+    <button mat-button [matMenuTriggerFor]="admin">Admin</button>
+    <mat-menu #admin="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="usersMenu">Users</button>
+        <button mat-menu-item [matMenuTriggerFor]="inventoryMenu">Inventory</button>
+        <button mat-menu-item [matMenuTriggerFor]="apparatusMenu">Apparatus</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="user">User</button>
+    <mat-menu #user="matMenu">
+        <button mat-menu-item>Profile</button>
+        <button mat-menu-item>Gear</button>
+        <button mat-menu-item>Training</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="finance">Finance</button>
+    <mat-menu #finance="matMenu">
+        <button mat-menu-item>Accounts</button>
+        <button mat-menu-item>Balance Sheet</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="operations">Operations</button>
+    <mat-menu #operations>
+        <button mat-menu-item>Incidents</button>
+        <button mat-menu-item>Training</button>
+        <button mat-menu-item>ISO</button>
+    </mat-menu>
+    <!-- sub menus -->
+    <mat-menu #usersMenu="matMenu">
+        <button mat-menu-item [routerLink]="['admin/users']" routerLinkActive="router-link-active">User List</button>
+        <button mat-menu-item [routerLink]="['admin/users/roles']" routerLinkActive="router-link-active">User Roles</button>
+    </mat-menu>
+
+    <mat-menu #inventoryMenu="matMenu">
+        <button mat-menu-item [routerLink]="['admin/items']" routerLinkActive="router-link-active">Item List</button>
+        <button mat-menu-item [routerLink]="['admin/items/categories']" routerLinkActive="router-link-active">Category List</button>
+    </mat-menu>
+
+    <mat-menu #apparatusMenu="matMenu">
+        <button mat-menu-item [routerLink]="['admin/apparatus']" routerLinkActive="router-link-active">Apparatus List</button>
+        <button mat-menu-item>Maintenance</button>
+        <button mat-menu-item [routerLink]="['admin/apparatus/types']" routerLinkActive="router-link-active">Apparatus Type</button>
+        <button mat-menu-item [routerLink]="['admin/apparatus/fueltypes']" routerLinkActive="router-link-active">Fuel Types</button>
+        <button mat-menu-item [routerLink]="['admin/apparatus/drivetypes']" routerLinkActive="router-link-active">Drive Types</button>
+    </mat-menu>
+</mat-toolbar>

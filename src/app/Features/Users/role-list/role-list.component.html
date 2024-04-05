@@ -4,7 +4,7 @@
     <div class="d-flex justify-content-end mt-3">
         <a [routerLink]="['..']" class="btn btn-primary">Users</a>
         &nbsp;&nbsp;
-        <a href="#" class="btn btn-primary">Add Role</a>
+        <a [routerLink]="['addrole']" class="btn btn-primary">Add Role</a>
     </div>
 
     <ng-container *ngIf="userRoles$ | async as roles">

@@ -6,6 +6,7 @@ import { environment } from '../../../../environments/environment.development';
 import { Item } from '../models/item.model';
 import { NOTIMP } from 'dns';
 import { Category } from '../models/category.model';
+import { AddCategoryRequest } from '../models/addCategoryRequest.model';
 
 @Injectable({
   providedIn: 'root'
@@ -24,5 +25,9 @@ export class ItemService {
 
   addItem(model: AddItemRequest): Observable<void>{
     return this.http.post<void>(`${environment.apiBaseUrl}/api/Items`, model);
+  }
+
+  addCategory(model: AddCategoryRequest): Observable<void>{
+    return this.http.post<void>(`${environment.apiBaseUrl}/api/Items/addcategory`, model);
   }
 }
