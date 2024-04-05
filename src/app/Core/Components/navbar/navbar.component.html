@@ -10,7 +10,7 @@
 
     <button mat-button [matMenuTriggerFor]="user">User</button>
     <mat-menu #user="matMenu">
-        <button mat-menu-item>Profile</button>
+        <button mat-menu-item [routerLink]="['admin/users/userdetails']">Profile</button>
         <button mat-menu-item>Gear</button>
         <button mat-menu-item>Training</button>
     </mat-menu>
