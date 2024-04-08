@@ -28,12 +28,12 @@ export const routes: Routes = [
         component: AddUserRoleComponent
     },
     {
-        path: 'admin/users/userdetails',
-        component: UserDetailsComponent
-    },
-    {
         path: 'admin/users/adduser',
         component: AddUserComponent
+    },
+    {
+        path: 'admin/users/:id',
+        component: UserDetailsComponent
     },
     {
         path: 'admin/apparatus/types',

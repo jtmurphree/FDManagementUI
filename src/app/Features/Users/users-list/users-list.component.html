@@ -17,6 +17,7 @@
                     <th>email</th>
                     <th>Unit Number</th>
                     <th>Role</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -27,6 +28,9 @@
                     <td>{{user.email}}</td>
                     <td>{{user.employeeId}}</td>
                     <td>{{user.userRoleName}}</td>
+                    <td>
+                        <a class="btn btn-light" [routerLink]="['/admin/users', user.id]">Edit</a>
+                    </td>
                 </tr>
             </tbody>
         </table>
