@@ -6,6 +6,7 @@ import { User } from '../models/user.model';
 import { AddUserRequest } from '../models/addUserRequest.model';
 import { UserRole } from '../models/userRole.model';
 import { AddUserRoleRequest } from '../models/addUseRoleRequest.model';
+import { UpdateUserRequest } from '../models/updateUserRequest.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -17,8 +18,8 @@ export class UserService {
     return this.http.get<User[]>(`${environment.apiBaseUrl}/api/User`);
   }
 
-  getUser(id: number, user: User): Observable<User>{
-    return this.http.put<User>(`${environment.apiBaseUrl}/api/User/${id}`, user);
+  getUser(id: string): Observable<User>{
+    return this.http.get<User>(`${environment.apiBaseUrl}/api/User/${id}`);
   }
 
   addUser(model: AddUserRequest): Observable<void>{
@@ -32,4 +33,8 @@ export class UserService {
   addUserRole(model: AddUserRoleRequest): Observable<void>{
     return this.http.post<void>(`${environment.apiBaseUrl}/api/User/createuserrole`, model);
   } 
+
+  updateUser(id: string, updateUserRequest: UpdateUserRequest): Observable<User> {
+    return this.http.put<User>(`${environment.apiBaseUrl}/api/User/${id}`, updateUserRequest);
+  }
 }

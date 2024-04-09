@@ -30,9 +30,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## To do
 <ul>
-    <li>add material controls</li>
-    <li>Add user details</li>
+    <li>Implement form groups</li>
+    <li>Add material controls to all forms</li>
     <li>Implement editing capability</li>
+    <li>Implement automated tests</li>
     <li>Add bread crumbs for navigation</li>
     <li>Add authenication and security measures</li>
     <li>Add styling</li>
