@@ -7,8 +7,11 @@ export class User{
     employeeId: string;
     phoneNumber: string;
     email: string;
+    passwordHash: string;
     userRoleName: string;
+    userRoleId: number;
     dateAdded: Date;
+    dateUpdated: Date;
 
     constructor(){
         this.id = 0
@@ -19,7 +22,10 @@ export class User{
         this.employeeId = '';
         this.phoneNumber = '';
         this.email= '';
+        this.passwordHash = '';
         this.userRoleName = ''
+        this.userRoleId = 0;
         this.dateAdded = new Date();
+        this.dateUpdated = new Date();
     }
 }
