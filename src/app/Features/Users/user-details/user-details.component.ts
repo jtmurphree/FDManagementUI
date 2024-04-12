@@ -85,4 +85,15 @@ export class UserDetailsComponent implements OnInit, OnDestroy{
       })
     }
   }
+
+  onDelete(): void{
+    if(this.userId){
+      this.userService.deleteUser(this.userId)
+      .subscribe({
+        next: (response) => {
+          this.router.navigateByUrl('admin/users');
+        } 
+      })
+    }
+  }
 }
