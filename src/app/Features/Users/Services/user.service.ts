@@ -37,4 +37,8 @@ export class UserService {
   updateUser(id: string, updateUserRequest: UpdateUserRequest): Observable<User> {
     return this.http.put<User>(`${environment.apiBaseUrl}/api/User/${id}`, updateUserRequest);
   }
+
+  deleteUser(id: string) : Observable<User>{
+    return this.http.delete<User>(`${environment.apiBaseUrl}/api/User/${id}`);
+  }
 }
